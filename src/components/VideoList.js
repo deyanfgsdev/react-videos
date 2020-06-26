@@ -7,6 +7,7 @@ const VideoList = (props) => {
       <VideoItem
         thumbnailURL={video.snippet.thumbnails.medium.url}
         title={video.snippet.title}
+        onVideoSelect={() => props.onVideoSelect(video)}
       />
     );
   });
