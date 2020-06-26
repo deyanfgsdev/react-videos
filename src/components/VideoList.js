@@ -2,7 +2,6 @@ import React from "react";
 import VideoItem from "./VideoItem";
 
 const VideoList = (props) => {
-  console.log(props.videos);
   const renderedList = props.videos.map((video) => {
     return (
       <VideoItem
@@ -12,7 +11,9 @@ const VideoList = (props) => {
     );
   });
 
-  return <div className="video-list">{renderedList}</div>;
+  return (
+    <div className="video-list ui relaxed divided list">{renderedList}</div>
+  );
 };
 
 export default VideoList;
